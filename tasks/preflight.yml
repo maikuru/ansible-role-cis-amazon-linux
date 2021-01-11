@@ -2,6 +2,10 @@
 ---
 
 # Preflight checks
+- name: output ansible_distribution
+  debug:
+    msg: "Distribution: {{ ansible_distribution }}:{{ ansible_distribution_version }}"
+  tags: always
 
 - name: Preflight - Fail if host is not suitable for this benchmark
   fail:
